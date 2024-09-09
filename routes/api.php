@@ -11,3 +11,4 @@ use App\Http\Controllers\UserController;
 
 
 Route::get('/all-user',[UserController::class, 'getAllUsers']);
+Route::post('/create-user',[UserController::class, 'createUserRoute'])->name('register-customer');
