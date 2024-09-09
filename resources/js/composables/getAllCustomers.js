@@ -2,7 +2,7 @@ import { ref } from 'vue';
 import axios from 'axios';
 
 export default function useCustomerInfo() {
-  const url = "http://127.0.0.1:8000/api/all-user";
+  const url = "http://127.0.0.1:8000/all-user";
   const customerData = ref([]);
   const successMessage = ref(null);
   const error = ref(null);
