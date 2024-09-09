@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-use Symfony\Component\HttpKernel\Event\ResponseEvent;
 
 class UserController extends Controller
 {
@@ -14,6 +13,10 @@ class UserController extends Controller
       return response()->json(['message'=>'fetch data successful', 'data'=> $data]);
    }
 
+
+   public function getCustomerForm(){
+      return view('register');
+   }
 
    public function createUserRoute(Request $request)
    {
@@ -43,5 +46,7 @@ class UserController extends Controller
       }
    
    }
+
+ 
 }
 
