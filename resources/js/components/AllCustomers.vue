@@ -1,13 +1,18 @@
 <script setup>
-  import { onMounted } from 'vue';
-  import useCustomerInfo from '../composables/getAllCustomers';
+import { onMounted } from 'vue';
+import { useRouter } from 'vue-router';
+import useCustomerInfo from '../composables/getAllCustomers';
 
-  const { customerData, error, getAllCustomer } = useCustomerInfo();
+const { customerData, error, getAllCustomer } = useCustomerInfo();
+const router = useRouter();
 
-  onMounted(() => {
-    getAllCustomer(); // Fetch data when component is mounted
-  });
+onMounted(() => {
+  getAllCustomer(); // Fetch data when component is mounted
+});
 
+const redirectToPage = () => {
+  router.push('/about');
+};
 </script>
 
 <template>
@@ -20,7 +25,9 @@
               <h2><b>Banking Management</b></h2>
             </div>
             <div class="col-xs-7">
-              <a href="#" class="btn btn-primary"><i class="fa-solid fa-circle-plus"></i> <span>Add New User</span></a>
+              <button @click="redirectToPage" class="btn btn-primary">
+                <i class="fa-solid fa-circle-plus"></i> <span>Add New User</span>
+              </button>
               <a href="#" class="btn btn-primary"><i class="fa-solid fa-file"></i> <span>Export to Excel</span></a>
             </div>
           </div>

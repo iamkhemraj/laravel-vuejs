@@ -1,8 +1,8 @@
 import './bootstrap';
 
 import { createApp } from 'vue';
-import App from './App.vue';
-import RegiForm from './RegiForm.vue';
+import App from './pages/App.vue';
+import RegiForm from './pages/RegiForm.vue';
 
 const app = createApp(App);
 
