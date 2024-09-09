@@ -1,0 +1,27 @@
+
+.card {
+	border-radius: 10px;
+}
+
+.card-header {
+	/* background-color: #299be4; */
+	border-bottom: 1px solid #e9ecef;
+}
+
+.form-group {
+	padding: 5px 0; /* Add padding above and below each form group */
+}
+
+.form-control {
+	margin-bottom: 5px; /* Add margin between input fields */
+}
+
+.btn-info {
+	background-color: #299be4;
+	border-color: #299be4;
+}
+
+.btn-info:hover {
+	background-color: #299be4;
+	border-color: #299be4;
+}
