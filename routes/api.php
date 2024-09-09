@@ -9,6 +9,3 @@ use App\Http\Controllers\UserController;
 // })->middleware('auth:sanctum');
 
 
-
-Route::get('/all-user',[UserController::class, 'getAllUsers']);
-Route::post('/create-user',[UserController::class, 'createUserRoute'])->name('register-customer');
