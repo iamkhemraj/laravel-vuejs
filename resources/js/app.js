@@ -1,16 +1,22 @@
 import './bootstrap';
 
 import { createApp } from 'vue';
-import App from './pages/App.vue';
-import RegiForm from './pages/RegiForm.vue';
+import { createRouter, createWebHistory } from 'vue-router';
+import App from './App.vue';
 
-const app = createApp(App);
+// Import your components
+import Home from './components/Home.vue';
+import Register from './components/Register.vue';
 
-// Register the RegiForm component globally if needed
-app.component('RegiForm', RegiForm);
+const routes = [
+  { path: '/', component: Home },
+  { path: '/register', component: Register }
+];
 
-app.mount('#app');
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+});
 
-// Alternatively, if you want to mount RegiForm to a different element:
-const regiFormApp = createApp(RegiForm);
-regiFormApp.mount('#RegiForm');
+createApp(App).use(router).mount('#app');
+createApp(Register).use(router).mount('#register');

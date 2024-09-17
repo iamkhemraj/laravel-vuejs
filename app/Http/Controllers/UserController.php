@@ -8,16 +8,7 @@ use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
 {
-   public function getAllUsers(){
-      $data = User::all();
-      return response()->json(['message'=>'fetch data successful', 'data'=> $data]);
-   }
-
-
-   public function getCustomerForm(){
-      return view('register');
-   }
-
+   //Create customer
    public function createUserRoute(Request $request)
    {
    
@@ -46,6 +37,14 @@ class UserController extends Controller
       }
    
    }
+
+   //Show all customer data
+   public function getAllUsers(){
+      $data = User::all();
+      return response()->json(['message'=>'fetch data successful', 'data'=> $data]);
+   }
+
+  
 
  
 }

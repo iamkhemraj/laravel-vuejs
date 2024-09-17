@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted } from 'vue';
 import { useRouter } from 'vue-router';
-import useCustomerInfo from '../composables/getAllCustomers';
+import useCustomerInfo from '../composables/customer-data';
 
 const { customerData, error, getAllCustomer } = useCustomerInfo();
 const router = useRouter();
@@ -11,7 +11,7 @@ onMounted(() => {
 });
 
 const redirectToPage = () => {
-  router.push('/about');
+  window.location.href='/register';
 };
 </script>
 

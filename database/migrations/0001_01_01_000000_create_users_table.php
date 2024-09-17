@@ -13,10 +13,16 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
+            $table->string('back_name');
+            $table->longText('address');
+            $table->bigInteger('aadharcard_number');
+            $table->bigInteger('account_number');
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->bigInteger('phone');
+            $table->bigInteger('phone_number');
+            $table->date('dob');
+            $table->enum('gender', ['male','female', 'others']);
             $table->string('status')->default('active');
             $table->timestamps();
         });

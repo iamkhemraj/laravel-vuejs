@@ -1,7 +1,7 @@
 <script setup>
-import AllCustomers from './components/AllCustomers.vue'
+import Home from './components/Home.vue'
 </script>
 
 <template>
-  <AllCustomers />
+  <Home />
 </template>
